@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Effect</title>
+  <style>
+    .webdev {
+      font-family: monospace;
+      color: #f2cc8f;
+      overflow: hidden; /* Hide overflowing text */
+      white-space: nowrap; /* Prevent text wrapping */
+      border-right: 2px solid orange; /* Simulate cursor */
+      width: 0; /* Start with no visible width */
+      animation: 
+        typing 4s steps(14, end), /* Typing effect */
+        blink-caret 0.7s step-end infinite; /* Blinking cursor */
+    }
+
+    /* Typing effect animation */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Blinking cursor animation */
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: orange; }
+    }
+  </style>
+</head>
+<body>
+  <div class="webdev">Hello, World!</div>
+</body>
+</html>
